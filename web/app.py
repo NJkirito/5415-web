@@ -1,16 +1,14 @@
-import io
 from pathlib import Path
 import streamlit as st
-from PIL import Image, ImageEnhance
+
+BASE_DIR = Path(__file__).parent  # app.py 所在目录 web/
 
 st.set_page_config(page_title="SWEETY", page_icon="🍰", layout="wide")
 
-pages=['pages/images.py', 'pages/videos.py']
-pg=st.navigation(pages)
+pages = ['pages/images.py', 'pages/videos.py']
+pg = st.navigation(pages)
 pg.run()
 
 with st.sidebar:
-    st.image('assets/logo.png')
-
-
-
+    logo_path = BASE_DIR / 'assets' / 'logo.png'
+    st.image(str(logo_path))
