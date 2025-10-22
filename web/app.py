@@ -1,7 +1,7 @@
 from pathlib import Path
 import streamlit as st
 
-BASE_DIR = Path(__file__).parent  
+BASE_DIR = Path(__file__).parent  # app.py 所在目录 web/
 
 st.set_page_config(page_title="SWEETY", page_icon="🍰", layout="wide")
 
